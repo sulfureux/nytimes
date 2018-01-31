@@ -1,0 +1,10 @@
+{
+  "presets" : [["env", { "modules": false }], "react", "jest"],
+  "plugins": [
+    "transform-react-jsx",
+    "transform-runtime",
+    "react-hot-loader/babel",
+    "transform-object-rest-spread",
+    "transform-es2015-modules-commonjs"
+  ]
+}

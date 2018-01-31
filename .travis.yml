@@ -1,0 +1,25 @@
+language: node_js
+sudo: enabled
+
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+install:
+  - yarn
+
+script:
+  - yarn run test
+  - yarn run build
+
+deploy:
+  on:
+    branch: master
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: pierreneter-nytimes
+  skip_cleanup: true
+  local_dir: dist
+  cache_control: "max-age=21600"
