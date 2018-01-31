@@ -114,4 +114,4 @@ Contain html templates of the app.
 
 ## License
 
-MIT @pierreneter
+Temp no license @pierreneter
